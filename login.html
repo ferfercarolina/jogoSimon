@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Simon - Login e Ranking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Área de Login -->
+    <div id="login-area">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" required><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required><br>
+            <button type="submit">Entrar</button>
+            <p id="register-link">Não tem uma conta? <a href="#" onclick="showRegister()">Registre-se</a></p>
+        </form>
+    </div>
+
+    <!-- Registro de Usuário -->
+    <div id="register-area" style="display:none;">
+        <h2>Registrar</h2>
+        <form id="register-form">
+            <label for="new-username">Nome de Usuário:</label>
+            <input type="text" id="new-username" required><br>
+            <label for="new-password">Senha:</label>
+            <input type="password" id="new-password" required><br>
+            <button type="submit">Registrar</button>
+        </form>
+        <p id="back-link"><a href="#" onclick="showLogin()">Voltar ao login</a></p>
+    </div>
+
+    <!-- Área do Jogo Simon -->
+    <div id="game-area" style="display:none;">
+        <h1>Jogo Simon</h1>
+        <div id="game-board">
+            <div class="game-tile" id="red"></div>
+            <div class="game-tile" id="green"></div>
+            <div class="game-tile" id="blue"></div>
+            <div class="game-tile" id="yellow"></div>
+        </div>
+        <h2>Pontuação: <span id="score">0</span></h2>
+        <button id="start-game">Iniciar Jogo</button>
+        <button id="view-ranking">Ver Ranking</button>
+        <button id="logout">Sair</button>
+    </div>
+
+    <!-- Área do Ranking -->
+    <div id="ranking-area" style="display:none;">
+        <h2>Ranking Geral</h2>
+        <ul id="ranking-list"></ul>
+        <button id="back-to-game">Voltar ao Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

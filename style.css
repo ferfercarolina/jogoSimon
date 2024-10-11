@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#login-area, #register-area, #game-area, #ranking-area {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 2px solid #ccc;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 5px;
+    width: 90%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.game-tile {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#red { background-color: red; }
+#green { background-color: green; }
+#blue { background-color: blue; }
+#yellow { background-color: yellow; }
+
+.game-tile.active {
+    opacity: 1;
+    box-shadow: 0 0 20px white;
+}
+
+#ranking-list {
+    text-align: left;
+}
